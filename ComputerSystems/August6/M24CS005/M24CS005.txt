@@ -1,0 +1,16 @@
+1) mkdir M24CS005
+2) cd M24CS005
+    vim Grade.c
+3)Program file created and also attached.
+4)gcc Grade.c
+    ./a.out
+5) wc -l Grade.c
+6) grep -n "You" Grade.c
+7) grep -o -w 'char\|unsigned\|int\|main\|void\|switch' Grade.c
+8) grep -o "{" Grade.c | wc -l
+9) Program file created and also attached.
+To compile and make the executable file we have to run this following command
+gcc -o wc.out wc.c
+
+To run the executable file we have to run this following command
+./wc.out file.txt
