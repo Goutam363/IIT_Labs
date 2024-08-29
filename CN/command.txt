@@ -1,0 +1,6 @@
+wireshark -D  //To show all interfaces with index numbers
+wireshark.exe -i 3 -w testCapture.pcapng -a duration:60  //Insert proper index number in this command
+wireshark.exe -r testCapture.pcapng  //To read the captured file
+
+
+traceroute amazon.in

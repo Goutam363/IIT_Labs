@@ -1,0 +1,81 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym,amsfonts,amssymb,amsthm,amsmath}
+
+\setlength{\parindent}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.8in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{18pt}
+\usepackage{graphicx}
+\usepackage{float}
+
+\title{Lab-4}
+\author{Goutam Halder}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Economic Stabilization Act}
+In March 2006, Congress raised the debt ceiling by an additional \$0.79 trillion to \$8.97 trillion, which was approximately 68\% of GDP. As of October 4, 2008, the \textit{Emergency Economic Stabilization Act of 2008} raised the current debt ceiling to \$11.3 trillion.
+
+\section{Mathematical Expressions}
+The equations from the research paper \textit{The Loss Surfaces of Multilayer Networks} are as follows:
+
+Equation (2):
+\begin{equation}
+h_k^v \leftarrow \sigma\left(W \cdot \text{MEAN}\left(\{h_{k-1}^v\} \cup \{h_{k-1}^u, \forall u \in N(v)\}\right)\right)
+\label{eq:equation2}
+\end{equation}
+
+
+Equation (3):
+\begin{equation}
+\text{AGGREGATEpool}_k = \max\left(\{\sigma(W_{\text{pool}}h_k^{ui} + b), \forall ui \in N(v)\}\right)
+\label{eq:equation3}
+\end{equation}
+
+
+Equation \ref{eq:equation2} represents the mean aggregator used in the GraphSAGE algorithm. It applies a non-linear activation function $\sigma$ to the weighted mean of a node's previous layer representation $h_{k-1}^v$ and its neighbors' representations $h_{k-1}^u$. This method aggregates neighborhood information to update the node’s representation, akin to localized spectral convolution, but without performing concatenation operations.
+
+Equation \ref{eq:equation3} describes the pooling aggregator in the GraphSAGE algorithm. Each neighbor's representation is transformed using a neural network and aggregated via element-wise max-pooling. This method captures diverse features from the neighborhood set using a non-linear activation $\sigma$ and can utilize various symmetric functions like mean-pooling.
+
+
+
+\section{Image}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{sample.jpg}
+    \caption{Peacock feather}
+    \label{fig:image1}
+\end{figure}
+
+The above figure \ref{fig:image1} is an image of a beautiful peacock feather captured on a rainy day.
+
+\section{Education Qualifications}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Degree & Name of School/College & Marks in Percentage & Year of Passing \\
+        \hline
+        B.Tech & Indian Institute of Information Technology, Bhagalpur & 72.5\% & 2022 \\
+        \hline
+        M.Tech & Indian Institute of Technology, Bhilai & 90\% & 2026 \\
+        \hline
+    \end{tabular}
+    \caption{Educational Qualifications of Goutam Halder}
+    \label{tab:qualifications}
+\end{table}
+
+The table \ref{tab:qualifications} lists my education qualifications, including the institutions, marks obtained, and years of completion.\\
+
+As described by Ying et al. \cite{gcn_recommender}, graph convolutional networks are suitable for large-scale recommender systems. Similarly, the work of Leskovec and Faloutsos \cite{sampling_large_graphs} addresses efficient sampling techniques from large graphs.
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

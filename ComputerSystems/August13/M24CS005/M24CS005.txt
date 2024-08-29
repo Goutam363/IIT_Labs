@@ -1,0 +1,2 @@
+1) date +'%a %b %d %r %Y'
+2) All linux commands are implemented in c and also attached.
